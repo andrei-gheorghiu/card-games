@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Hoyle Playing Cards';
+    src: url('./subset-HoylePlayingCards.woff2') format('woff2'),
+        url('./subset-HoylePlayingCards.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: block;
+}
+

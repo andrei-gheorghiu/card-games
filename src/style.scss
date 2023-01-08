@@ -1,0 +1,45 @@
+@import "/node_modules/dejavu-sans/css/dejavu-sans.min.css";
+@import "./assets/stylesheet.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin make-scrollable {
+  @media (pointer: fine) {
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-track:hover {
+      background-color: transparent;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(#666, 0.42);
+      border-radius: 4px;
+    }
+    &:hover::-webkit-scrollbar-thumb {
+      background-color: rgba(#666, 0.85);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba(#999, 0.42);
+    }
+    scrollbar-width: thin;
+  }
+}
+:root {
+  font-family: "DejaVu Sans", sans-serif;
+  .playing-card .card-face {
+    font-family: "Hoyle Playing Cards", fantasy;
+  }
+}
+
+#app {
+  @apply container mx-auto min-h-screen;
+}
+
+body {
+  @include make-scrollable;
+  @apply bg-white dark:bg-gray-800 overflow-y-scroll;
+}
